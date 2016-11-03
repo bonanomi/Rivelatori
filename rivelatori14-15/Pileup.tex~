@@ -1,0 +1,135 @@
+\chapter{Pile-up}
+Il pile-up \`e un fenomeno di particolare importanza ad alti rate, avviene quando due impulsi dovuti a due eventi diversi interferiscono tra di loro
+dando luogo ad impulsi dirtorti.
+Il pile-up disturba gli spettri e le misure temporale degli impulsi.
+Esistono pile-up di due tipi:
+\begin{itemize}
+\item \textbf{sulla discesa}, avviene durante il fronte di scarica del segnale ed \`e pi\`u probabile se esso \`e lento. Esso da luogo a impulsi
+pi\`u alti del normale (coda destra della gaussiana) o pi\`u piccoli (se ho undershoot) del normale (coda sinistra della gaussiana). Pu\`o avvenire
+anche a bassi rate.
+\item \textbf{sulla salita}, avviene lungo il fronte di salita, da luogo ad impulsi pi\`u alti del normale (anche doppi). 
+\end{itemize}
+Questi problemi possono essere combattuti con una formatura adeguata, tuttavia formature troppo restrittive possono portare a problemi di rapporto segnale-rumore
+oppure di deficit balistico.
+\section{Stima del pile-up}
+Per stimare il livello di pile-up posso ricorrere alla distribuzione degli intervalli di tempo:
+ad ogni segnale posso associare un tempo caratteristico di larghezza $\tau$, per cui la probabilit\`a di non avere
+pile-up con un rate $n$ di eventi \`e $P(t>\tau) = e^{-n\tau}$.
+Quando si considera il pile-up \`e importante considerare che \`e un fenomeno che coinvolge due eventi, per cui per ogni evento di pile-up
+due segnali sono stati rovinati: ad esempio, se su 100 segnali, ho il 10\% di probabilt\`a di avere pile-up, allora 10 segnali faranno
+pile-up con altri 10, dando un'efficienza effettiva del 80\%.
+Ad alti rate questa stima cade, in quanto posso avere pile-up tripli, quadrupli e chi pi\`u ne ha pi\`u ne metta.
+\section{Reiezione del pile-up}
+\`E possibile effettuare una reiezione degli impulsi di pile-up, tuttavia questa procedura aumenta il tempo morto, per cui sar\`a successivamente
+necessario effettuare una correzione.
+Gli impulsi di pile-up possono essere scartati mediante un PSD, in quanto gli impulsi avranno una forma diversa, oppure mediante un'analisi offline.
+In alternativa \`e possibile sdoppiare il segnale in uscita dal PRE in due rami, uno lento che forma il segnale e uno veloce che produce un impulso logico;
+un sistema verifica che al momento dell'arrivo del segnale formato non siano stati prodotti altri impulsi logici.
+In assenza di ulteriori impulsi non sono giunti altri segnali che possono fare pile-up \`e l'impulso formato viene accettato; un sistema di questo tipo elimina pile-up entro la risoluzione temporale del ramo veloce.
+\subsection{Correzione del numero di impulsi soggetti a pile-up}
+Posso valutare il numero di impulsi che sono stati soggetti a pile-up utilizzando un impulsatore che produca impulsi di ampiezza tale da evitare
+pile-up e che cadano in una regione dello spettro fuori dall'area di interesse per la misura.
+L'impulsatore produce impulsi con rate fissato, per cui \`e possibile conoscere il numero di impulsi prodotti in un certo tempo, osservando l'area
+del picco prodotto dall'impulsatore \`e possibile determinare la frazione di impulsi che non ha passato il sistema di reiezione del pile-up.
+A questo punto, i segnali di interesse sono prodotti in modo piatto, si pu\`o supporre che la stessa frazione venga rigettata per pile-up
+e si pu\`o correggere di conseguenza.
+In realt\`a questo sistema andrebbe realizzato con generatore di impulsi casuale, tuttavia simulazioni MC hanno mostrato che se il rate
+dell'impulsatore \`e inferiore al 10\% del rate di produzione dei segnali, allora i due sistemi sono equivalenti.
+\section{Analisi statistica degli eventi di pile-up}
+Poniamo $n$ il rate di conteggi reale e $m$ il rate di conteggi misurato.
+\subsection{Rivelatore non paralizzabile}
+In un rivelatore non paralizzabile vale:
+\begin{equation*}
+n = \frac{m}{1-m\tau}
+\end{equation*}
+\begin{equation*}
+m = \frac{n}{1+n\tau}
+\end{equation*}
+In un tempo $\tau$ avvengono in media $n\tau$ eventi, la probabilit\`a che in un tempo $\tau$ facciano pile-up $x+1$ eventi vale:
+\begin{equation*}
+P(x) = \frac{(n\tau)^x e^{-n\tau}}{x!}
+\end{equation*}
+Se non voglio avere pile-up dovr\`o fare in modo di ridurre al minimo:
+\begin{equation*}
+P(0) = e^{-n\tau}
+\end{equation*}
+La media di eventi di pile-up in un tempo $\tau$ sar\`a:
+\begin{equation*}
+<x> = \sum_{i=0}^{\infty}(x+1) P(x) =\sum_{i=0}^{\infty}x \frac{(n\tau)^x e^{-n\tau}}{x!} + \sum_{i=0}^{\infty} \frac{(n\tau)^x e^{-n\tau}}{x!} = n\tau +1
+\end{equation*}
+ma poich\`e:
+\begin{equation*}
+<x> = \frac{n}{m} = n\tau +1
+\end{equation*}
+si pu\`o dire:
+\begin{equation*}
+m = \frac{n}{n\tau + 1}
+\end{equation*}
+coerentemente con la descrizione di rivelatore non paralizzabile precedente.
+\subsection{Rivelatore paralizzabile}
+Nel caso di un rivelatore paralizzabile:
+\begin{equation*}
+m = n e^{-n\tau}
+\end{equation*}
+La probabilit\`a di avere 0 conteggi in un $\tau$ \`e:
+\begin{equation*}
+P(0) = e^{-n\tau}
+\end{equation*}
+La probabilit\`a di avere 1 conteggio entro un $\tau$ \`e data dalla probabilit\`a di avere 0 conteggi entro $t$, averne uno entro $t$ e $t+dt$ e non averne pi\`u fino a $t+\tau$ (essendo paralizzabile adesso il rivelatore si sveglia a $t+\tau$ e non a $\tau$):
+\begin{equation*}
+P(1) = \int_0^{\tau} e^{-nt} n dt e^{-n\tau} = e^{-n\tau}(1-e^{-n\tau})
+\end{equation*}
+A questo punto \`e possibile calcolare la probabilit\`a di avere un pile-up triplo come la probabilit\`a di avere 0 eventi entro $t$, averne uno tra $t$ e $t+dt$ e poi averne un altro ancora entro $tau$, per cui ricorsivamente:
+\begin{equation*}
+P(2) = \int_0^{\tau} e^{-nt} n dt P(1) = e^{-n\tau} (1- e^{-n\tau} )^2
+\end{equation*}
+Induttivamente:
+\begin{equation*}
+P(x) =  e^{-n\tau} (1- e^{-n\tau} )^x
+\end{equation*}
+La media del numero di eventi in un tempo $\tau$ sar\`a:
+\begin{equation*}
+<x> = \sum_i=0^{\infty} (x+1) P(x) = e^{-n\tau}e^{2n\tau} = e^{n\tau}
+\end{equation*}
+Per cui si ottiene da $<x>=n/m$:
+\begin{equation*}
+m = n e^{-n\tau}
+\end{equation*}
+come ottenuto precedentemente.
+\subsection{Spettri e tassi di pile-up}
+Uno spettro pu\`o essere pensato come una combinazione lineare di spettri di zero pile-up, pile-up singolo, pile-up doppio e cos\`i via, pesati
+per le singole probabilit\`a.
+Se non utilizzo sistemi di reiezione del pile-up, allora il mio sistema \`e paralizzabile: se $\tau$ \`e la durata di un impulso, ciascun impulso
+in pile-up allunga il tempo morto di $\tau$; se utilizzo reiezione, dipende dal tipo di sistema che utilizzo.\\
+La frequenza di impulsi non soggetti a pile-up si trova da:
+\begin{equation*}
+f_e = \frac{P(0)}{<x>}
+\end{equation*}
+Nel caso non paralizzabile si trova ($n\tau \ll 1$):
+\begin{equation*}
+f_e = \frac{e^{-n\tau}}{n\tau + 1} \approx (1-n\tau)(1-n\tau) \approx 1-2n\tau
+\end{equation*}
+Nel caso paralizzabile si trova, sotto la stessa approssimazione:
+\begin{equation*}
+f_e = \frac{e^{-n\tau}}{e^{n\tau}} = e^{-2n\tau} \approx 1-2n\tau
+\end{equation*}
+Il tasso di eventi senza pile-up vale:
+\begin{equation*}
+r_{pf} = P(0) m  = e^{-n\tau} m
+\end{equation*}
+Per rivelatori non paralizzabili si ha:
+\begin{equation*}
+r_{pf} = P(0) \frac{n}{1+n\tau} 
+\end{equation*}
+Per rivelatori paralizzabili:
+\begin{equation*}
+r_{pf} = e^{-n\tau} n e^{-n\tau}
+\end{equation*}
+Esistono valori di n che massimizzano questi tassi, per i non paralizzabili vale $n = 0.618/\tau$, per i paralizzabili $n=0.5/\tau$.
+Nei sistemi paralizzabili $m$ ha un proprio massimo, esso si vale $0.368/\tau$ se $n=1/\tau$, questo tasso porta ad avere una frequenza
+di impulsi liberi da pile-up del $13.5\%$, mentre se massimizzo il rate di eventi pile-up free vale $36.8\%$, ovvero conto pi\`u eventi
+liberi da pile-up, ma nel complessivo il 70\% degli impulsi totali \`e soggetto a pile-up.\\
+Infine, il tasso di impulsi soggetti a pile-up se $\tau \ll n$  al primo ordine in $\tau$ vale:
+\begin{equation*}
+r_{pu} = m (1-P(0)) = m (1 - e^{-n\tau}) \approx m (n \tau) = n e^{-n\tau} (n\tau) \approx n^2 \tau 
+\end{equation*}

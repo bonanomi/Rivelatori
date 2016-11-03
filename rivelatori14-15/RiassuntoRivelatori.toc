@@ -1,0 +1,258 @@
+\select@language {italian}
+\select@language {italian}
+\contentsline {part}{I\hspace {1em}Introduzione e manipolazione dei segnali}{8}
+\contentsline {chapter}{\numberline {1}Interazione radiazione-materia}{9}
+\contentsline {section}{\numberline {1.1}Interazione tra particelle cariche pesanti e materia}{9}
+\contentsline {subsection}{\numberline {1.1.1}La formula di Bethe-Bloch}{9}
+\contentsline {section}{\numberline {1.2}Interazione tra elettroni e materia}{10}
+\contentsline {section}{\numberline {1.3}Interazione fotoni-materia}{11}
+\contentsline {section}{\numberline {1.4}Interazione neutroni-materia}{12}
+\contentsline {chapter}{\numberline {2}Cenni di statistica}{14}
+\contentsline {section}{\numberline {2.1}Distribuzioni}{14}
+\contentsline {section}{\numberline {2.2}Confronto con i dati sperimentali}{14}
+\contentsline {section}{\numberline {2.3}Singola misura}{15}
+\contentsline {section}{\numberline {2.4}Ottimizzazione dei conteggi}{15}
+\contentsline {section}{\numberline {2.5}Limiti di rivelabilit\`a}{16}
+\contentsline {section}{\numberline {2.6}Distribuzione degli intervalli di tempo}{17}
+\contentsline {chapter}{\numberline {3}Trattamento dei segnali elettrici}{18}
+\contentsline {section}{\numberline {3.1}Impedenze}{18}
+\contentsline {section}{\numberline {3.2}Effetto pelle}{18}
+\contentsline {section}{\numberline {3.3}I cavi coassiali}{18}
+\contentsline {subsection}{\numberline {3.3.1}Disturbi nei coassiali}{19}
+\contentsline {subsection}{\numberline {3.3.2}Metodi di abbattimento del rumore}{19}
+\contentsline {subsection}{\numberline {3.3.3}Impedenza caratteristica e riflessione del segnale}{19}
+\contentsline {subsubsection}{Segnali lenti o a bassa frequenza}{19}
+\contentsline {subsubsection}{Segnali veloci o ad alta frequenza}{20}
+\contentsline {section}{\numberline {3.4}Attenuatori di segnali}{20}
+\contentsline {section}{\numberline {3.5}Sdoppiamento del segnale}{20}
+\contentsline {section}{\numberline {3.6}Trasformatore invertente}{21}
+\contentsline {section}{\numberline {3.7}La formatura del segnale}{21}
+\contentsline {subsection}{\numberline {3.7.1}Differenziatore CR o filtro passa-alto}{21}
+\contentsline {subsection}{\numberline {3.7.2}Integratore RC o filtro passa-basso}{23}
+\contentsline {subsection}{\numberline {3.7.3}Formatura CR-RC}{24}
+\contentsline {subsection}{\numberline {3.7.4}Formatura gaussiana}{24}
+\contentsline {subsection}{\numberline {3.7.5}Formature con fitri attivi}{26}
+\contentsline {subsection}{\numberline {3.7.6}Formatura CR-RC-CR}{26}
+\contentsline {subsection}{\numberline {3.7.7}Formatura con singola linea di ritardo}{26}
+\contentsline {subsection}{\numberline {3.7.8}Formatura con doppia linea di ritardo}{26}
+\contentsline {section}{\numberline {3.8}Cancellazione del polo zero}{26}
+\contentsline {section}{\numberline {3.9}Spostamenti della linea di base}{26}
+\contentsline {chapter}{\numberline {4}Impulsi lineari e impulsi logici}{29}
+\contentsline {section}{\numberline {4.1}Classificazione degli impulsi lineari}{29}
+\contentsline {subsection}{\numberline {4.1.1}Impulsi veloci}{29}
+\contentsline {subsection}{\numberline {4.1.2}Impulsi lenti}{29}
+\contentsline {subsection}{\numberline {4.1.3}Impulsi dopo formatura}{30}
+\contentsline {section}{\numberline {4.2}Impulsi logici}{30}
+\contentsline {subsection}{\numberline {4.2.1}Impulsi TTL}{30}
+\contentsline {subsection}{\numberline {4.2.2}Impulsi veloci NIM}{30}
+\contentsline {subsection}{\numberline {4.2.3}Impulsi di gate}{30}
+\contentsline {section}{\numberline {4.3}Dispositivi per il trattamento degli impulsi}{30}
+\contentsline {subsection}{\numberline {4.3.1}Linear-Linear}{30}
+\contentsline {subsection}{\numberline {4.3.2}Linear-Logic}{31}
+\contentsline {subsection}{\numberline {4.3.3}Logic-Linear}{31}
+\contentsline {subsection}{\numberline {4.3.4}Logic-Logic}{31}
+\contentsline {section}{\numberline {4.4}Preamplificatori}{31}
+\contentsline {subsection}{\numberline {4.4.1}Configurazioni dei preamplificatori}{32}
+\contentsline {subsection}{\numberline {4.4.2}Polarizzazione del rivelatore}{32}
+\contentsline {subsubsection}{Configurazione AC-coupled}{32}
+\contentsline {subsubsection}{Configurazione DC-coupled}{34}
+\contentsline {subsection}{\numberline {4.4.3}Preamplificatori nei vari rivelatori}{34}
+\contentsline {subsection}{\numberline {4.4.4}Limite sul tasso di conteggi per la saturazione}{34}
+\contentsline {section}{\numberline {4.5}Amplificatori lineari}{35}
+\contentsline {subsection}{\numberline {4.5.1}Amplificatori a soglia}{36}
+\contentsline {section}{\numberline {4.6}Sistemi di conteggio}{36}
+\contentsline {subsection}{\numberline {4.6.1}Discriminatori}{37}
+\contentsline {subsection}{\numberline {4.6.2}Contatori o scaler}{37}
+\contentsline {subsection}{\numberline {4.6.3}Tempo morto nei sistemi di conteggio}{37}
+\contentsline {section}{\numberline {4.7}Analisi dell'ampiezza degli impulsi}{37}
+\contentsline {subsection}{\numberline {4.7.1}Deficit balistico}{38}
+\contentsline {section}{\numberline {4.8}Rumore}{38}
+\contentsline {subsection}{\numberline {4.8.1}Microfonismo}{38}
+\contentsline {subsection}{\numberline {4.8.2}Formatura e rumore}{39}
+\contentsline {section}{\numberline {4.9}L'impulso di gate}{39}
+\contentsline {section}{\numberline {4.10}Tiratore di impulsi}{39}
+\contentsline {chapter}{\numberline {5}Misure temporali}{40}
+\contentsline {section}{\numberline {5.1}Trattamento digitale del segnale}{40}
+\contentsline {section}{\numberline {5.2}Il convertitore analogico-digitale}{40}
+\contentsline {subsection}{\numberline {5.2.1}L'ADC flash}{41}
+\contentsline {subsection}{\numberline {5.2.2}L'ADC multipasso}{41}
+\contentsline {section}{\numberline {5.3}Filtraggio e formatura del segnale digitale}{43}
+\contentsline {section}{\numberline {5.4}Analisi della forma dell'impulso}{44}
+\contentsline {subsection}{\numberline {5.4.1}Ristabilimento della linea di base}{44}
+\contentsline {subsection}{\numberline {5.4.2}Deconvoluzione di impulsi di pile-up}{44}
+\contentsline {section}{\numberline {5.5}Estrazione di informazioni temporali}{44}
+\contentsline {subsection}{\numberline {5.5.1}Leading edge trigger}{45}
+\contentsline {subsection}{\numberline {5.5.2}Trigger sull'istante di crossover dello zero}{45}
+\contentsline {subsection}{\numberline {5.5.3}Constant fraction timing}{46}
+\contentsline {subsection}{\numberline {5.5.4}ARC timing}{46}
+\contentsline {subsection}{\numberline {5.5.5}ELET timing}{47}
+\contentsline {subsection}{\numberline {5.5.6}FPET timing}{47}
+\contentsline {subsection}{\numberline {5.5.7}Confronto dei sistemi di timing}{47}
+\contentsline {section}{\numberline {5.6}Spettroscopia temporale}{47}
+\contentsline {subsection}{\numberline {5.6.1}Spettroscopia temporale con un TAC}{47}
+\contentsline {subsection}{\numberline {5.6.2}Spettroscopia temporale con un'unit\`a di coincidenza}{49}
+\contentsline {subsection}{\numberline {5.6.3}Correzione delle coincidenze casuali}{49}
+\contentsline {subsection}{\numberline {5.6.4}Determinazione di $\tau $}{50}
+\contentsline {subsection}{\numberline {5.6.5}Misura di coincidenze ritardate}{50}
+\contentsline {subsection}{\numberline {5.6.6}Misure di attivit\`a}{50}
+\contentsline {section}{\numberline {5.7}Moduli per misure temporali}{51}
+\contentsline {subsection}{\numberline {5.7.1}Moduli di trigger}{51}
+\contentsline {subsection}{\numberline {5.7.2}Unit\`a di coincidenza}{51}
+\contentsline {subsection}{\numberline {5.7.3}TAC}{51}
+\contentsline {subsection}{\numberline {5.7.4}TDC, Time to Digital Converter}{52}
+\contentsline {subsection}{\numberline {5.7.5}Sistemi di ritardo}{52}
+\contentsline {subsection}{\numberline {5.7.6}Amplificatori a banda larga e filtri temporali}{52}
+\contentsline {section}{\numberline {5.8}Pulse Shape Discrimination e Rise Time Discrimination}{53}
+\contentsline {chapter}{\numberline {6}MultiChannel Analyzer}{55}
+\contentsline {section}{\numberline {6.1}Analisi degli impulsi con un MCA}{55}
+\contentsline {section}{\numberline {6.2}Caratteristiche di un MCA}{55}
+\contentsline {subsection}{\numberline {6.2.1}Canali richiesti}{55}
+\contentsline {subsection}{\numberline {6.2.2}Calibrazione e linearit\`a}{55}
+\contentsline {section}{\numberline {6.3}Componenti di un MCA}{56}
+\contentsline {section}{\numberline {6.4}Dettagli sul ADC}{57}
+\contentsline {subsection}{\numberline {6.4.1}ADC con rampa lineare (Wilkinson)}{57}
+\contentsline {subsection}{\numberline {6.4.2}ADC ad approssimazioni successive}{57}
+\contentsline {subsection}{\numberline {6.4.3}Il principio della scala che scorre}{57}
+\contentsline {section}{\numberline {6.5}Tempo morto degli MCA (NON HO CAPITO IL METODO HARMS)}{58}
+\contentsline {section}{\numberline {6.6}Stabilizzazione dello spettro}{58}
+\contentsline {subsection}{\numberline {6.6.1}Riallineamento dello spettro}{59}
+\contentsline {section}{\numberline {6.7}Analisi degli spettri}{59}
+\contentsline {subsection}{\numberline {6.7.1}Deconvoluzione e ricostruzione dello spettro reale}{59}
+\contentsline {subsection}{\numberline {6.7.2}Stripping dello spettro}{60}
+\contentsline {subsection}{\numberline {6.7.3}Analisi dei picchi}{61}
+\contentsline {chapter}{\numberline {7}Pile-up}{62}
+\contentsline {section}{\numberline {7.1}Stima del pile-up}{62}
+\contentsline {section}{\numberline {7.2}Reiezione del pile-up}{62}
+\contentsline {subsection}{\numberline {7.2.1}Correzione del numero di impulsi soggetti a pile-up}{63}
+\contentsline {section}{\numberline {7.3}Analisi statistica degli eventi di pile-up}{63}
+\contentsline {subsection}{\numberline {7.3.1}Rivelatore non paralizzabile}{63}
+\contentsline {subsection}{\numberline {7.3.2}Rivelatore paralizzabile}{64}
+\contentsline {subsection}{\numberline {7.3.3}Spettri e tassi di pile-up}{65}
+\contentsline {part}{II\hspace {1em}Tipi di rivelatori}{66}
+\contentsline {chapter}{\numberline {8}Introduzione ai rivelatori di radiazione}{67}
+\contentsline {section}{\numberline {8.1}Classificazione dei rivelatori}{67}
+\contentsline {subsection}{\numberline {8.1.1}Tipo di grandezza fisica da misurare}{67}
+\contentsline {subsection}{\numberline {8.1.2}Tipo di radiazione rivelata}{67}
+\contentsline {subsection}{\numberline {8.1.3}Principio di funzionamento}{68}
+\contentsline {section}{\numberline {8.2}Misure in regime impulsivo}{68}
+\contentsline {subsection}{\numberline {8.2.1}La spettroscopia}{68}
+\contentsline {subsection}{\numberline {8.2.2}Catena di lettura}{69}
+\contentsline {section}{\numberline {8.3}Propriet\`a dei rivelatori}{69}
+\contentsline {subsection}{\numberline {8.3.1}Efficienza}{70}
+\contentsline {subsubsection}{Fattori geometrici}{70}
+\contentsline {subsubsection}{Attenuazione del materiale}{70}
+\contentsline {subsubsection}{Efficienza di interazione}{71}
+\contentsline {subsubsection}{Efficienza di registrazione}{71}
+\contentsline {subsubsection}{Altre definizioni}{71}
+\contentsline {subsection}{\numberline {8.3.2}Risoluzione energetica}{71}
+\contentsline {subsubsection}{Fluttuazioni nella generazione della carica}{71}
+\contentsline {subsection}{\numberline {8.3.3}Risoluzione spaziale}{72}
+\contentsline {subsection}{\numberline {8.3.4}Risoluzione temporale}{73}
+\contentsline {subsubsection}{Misura del tempo morto}{74}
+\contentsline {chapter}{\numberline {9}Scintillatori}{75}
+\contentsline {section}{\numberline {9.1}Meccanismo di scintillazione}{75}
+\contentsline {subsection}{\numberline {9.1.1}Scintillatori inorganici}{75}
+\contentsline {subsection}{\numberline {9.1.2}Scintillatori organici}{76}
+\contentsline {section}{\numberline {9.2}Caratteristiche di uno scintillatore ideale}{76}
+\contentsline {subsection}{\numberline {9.2.1}Efficienza di scintillazione}{77}
+\contentsline {subsection}{\numberline {9.2.2}Linearit\`a}{77}
+\contentsline {subsection}{\numberline {9.2.3}Trasparenza}{78}
+\contentsline {subsection}{\numberline {9.2.4}Tempo di emissione}{78}
+\contentsline {subsection}{\numberline {9.2.5}Proprieta ottiche e meccaniche}{78}
+\contentsline {section}{\numberline {9.3}La raccolta della luce}{79}
+\contentsline {section}{\numberline {9.4}Il fotocatodo}{79}
+\contentsline {subsection}{\numberline {9.4.1}Fabbricazione dei fotocatodi}{80}
+\contentsline {section}{\numberline {9.5}Il fotomoltiplicatore}{80}
+\contentsline {subsection}{\numberline {9.5.1}I dinodi}{80}
+\contentsline {section}{\numberline {9.6}Alimentazione del sistema a dinodi}{82}
+\contentsline {section}{\numberline {9.7}Caratteristiche dei fototubi}{83}
+\contentsline {section}{\numberline {9.8}Impulsi prodotti dal fototubo}{83}
+\contentsline {section}{\numberline {9.9}Tempo di risposta e risoluzione temporale}{84}
+\contentsline {section}{\numberline {9.10}Risoluzione energetica dello scintillatore}{84}
+\contentsline {section}{\numberline {9.11}Rumore e impulsi spuri}{85}
+\contentsline {chapter}{\numberline {10}Spettroscopia $\gamma $}{86}
+\contentsline {section}{\numberline {10.1}Effetto fotoelettrico}{86}
+\contentsline {section}{\numberline {10.2}Effetto Compton}{86}
+\contentsline {section}{\numberline {10.3}Produzione di coppie}{86}
+\contentsline {section}{\numberline {10.4}Funzione di risposta degli spettrometri $\gamma $}{87}
+\contentsline {subsection}{\numberline {10.4.1}Caso del rivelatore piccolo}{87}
+\contentsline {subsection}{\numberline {10.4.2}Caso del rivelatore grande}{88}
+\contentsline {subsection}{\numberline {10.4.3}Caso del rivelatore intermedio}{88}
+\contentsline {section}{\numberline {10.5}Utilizzo di scintillatori come spettrometri $\gamma $}{90}
+\contentsline {subsection}{\numberline {10.5.1}Risposta ai fotoni ad alta energia}{90}
+\contentsline {subsection}{\numberline {10.5.2}Linearit\`a della misura}{90}
+\contentsline {subsection}{\numberline {10.5.3}Calibrazione in energia dei rivelatori}{92}
+\contentsline {subsection}{\numberline {10.5.4}Convenzioni sulle efficienze nella spettroscopia $\gamma $}{93}
+\contentsline {chapter}{\numberline {11}Rivelatori a gas}{94}
+\contentsline {section}{\numberline {11.1}Principio di funzionamento}{94}
+\contentsline {section}{\numberline {11.2}Processi all'interno di un rivelatore a gas}{94}
+\contentsline {subsection}{\numberline {11.2.1}Diffusione}{94}
+\contentsline {subsection}{\numberline {11.2.2}Il trasferimento di carica}{95}
+\contentsline {subsection}{\numberline {11.2.3}Ricombinazione}{95}
+\contentsline {section}{\numberline {11.3}La mobilit\`a e la migrazione delle cariche}{96}
+\contentsline {section}{\numberline {11.4}Le camere a ionizzazione}{96}
+\contentsline {section}{\numberline {11.5}Funzionamento in modo impulsivo delle camere a ionizzazione}{98}
+\contentsline {subsection}{\numberline {11.5.1}Sviluppo del segnale nel tempo}{98}
+\contentsline {section}{\numberline {11.6}Le camere proporzionali}{99}
+\contentsline {subsection}{\numberline {11.6.1}Problemi delle camere proporzionali}{100}
+\contentsline {section}{\numberline {11.7}Fluttuazioni statistiche nelle camere proporzionali}{101}
+\contentsline {subsection}{\numberline {11.7.1}Sviluppo del segnale}{102}
+\contentsline {section}{\numberline {11.8}Contatori Geiger-M\"uller}{103}
+\contentsline {chapter}{\numberline {12}Rivelatori a semiconduttore}{106}
+\contentsline {section}{\numberline {12.1}Semiconduttori intrinseci}{106}
+\contentsline {section}{\numberline {12.2}Semiconduttori estrinseci o drogati}{107}
+\contentsline {section}{\numberline {12.3}Rivelatori basati su i semiconduttori}{107}
+\contentsline {section}{\numberline {12.4}La giunzione p-n}{108}
+\contentsline {subsection}{\numberline {12.4.1}Dimensioni della regione di svuotamento}{108}
+\contentsline {section}{\numberline {12.5}Rivelatori al silicio}{110}
+\contentsline {subsection}{\numberline {12.5.1}Rivelatori a barriera superficiale}{111}
+\contentsline {subsection}{\numberline {12.5.2}Rivelatori a diffusione}{111}
+\contentsline {section}{\numberline {12.6}Rivelatori HPGe}{111}
+\contentsline {chapter}{\numberline {13}Rivelatori per neutroni lenti}{113}
+\contentsline {section}{\numberline {13.1}Reazioni nucleari con neutroni a bassa energia}{113}
+\contentsline {subsection}{\numberline {13.1.1}La cattura neutronica}{113}
+\contentsline {subsection}{\numberline {13.1.2}La fissione}{114}
+\contentsline {section}{\numberline {13.2}Reazioni importanti}{114}
+\contentsline {subsection}{\numberline {13.2.1}Cattura del $^{10}$B}{114}
+\contentsline {subsection}{\numberline {13.2.2}La cattura del $^{6}$Li}{115}
+\contentsline {subsection}{\numberline {13.2.3}La cattura $^{3}$He}{115}
+\contentsline {subsection}{\numberline {13.2.4}Cattura radiativa del $^{157}$Gd}{115}
+\contentsline {section}{\numberline {13.3}Rivelatori basati sul boro-10}{115}
+\contentsline {subsection}{\numberline {13.3.1}Tubo proporzionale a BF$_3$}{115}
+\contentsline {subsection}{\numberline {13.3.2}Rivelatori rivestiti con boro}{117}
+\contentsline {subsection}{\numberline {13.3.3}Scintillatori caricati con boro}{118}
+\contentsline {section}{\numberline {13.4}Altri tipi di rivelatori}{118}
+\contentsline {subsection}{\numberline {13.4.1}Rivelatori al litio}{118}
+\contentsline {subsection}{\numberline {13.4.2}Contatori proporzionali ad elio-3}{118}
+\contentsline {chapter}{\numberline {14}Rivelatori per neutroni veloci}{119}
+\contentsline {section}{\numberline {14.1}Conteggio di neutroni veloci}{119}
+\contentsline {subsection}{\numberline {14.1.1}Il dosimetro sferico}{119}
+\contentsline {subsection}{\numberline {14.1.2}Contatori a risposta piatta}{119}
+\contentsline {subsubsection}{Il contatore lungo}{120}
+\contentsline {subsubsection}{Alternative}{120}
+\contentsline {section}{\numberline {14.2}Rivelatori basati su reazioni indotte da neutroni veloci}{122}
+\contentsline {subsection}{\numberline {14.2.1}Reazioni e rivelatori del litio-6}{122}
+\contentsline {subsection}{\numberline {14.2.2}Reazioni e rivelatori con l'elio-3}{123}
+\contentsline {section}{\numberline {14.3}Spettroscopia attraverso la diffusione di neutroni}{124}
+\contentsline {section}{\numberline {14.4}Scintillatori per rinculo di protoni}{124}
+\contentsline {subsection}{\numberline {14.4.1}Effetti che distorcono lo spettro}{124}
+\contentsline {subsection}{\numberline {14.4.2}Efficienza contro soglia di bias}{125}
+\contentsline {subsection}{\numberline {14.4.3}Calibrazione con raggi $\gamma $}{125}
+\contentsline {subsection}{\numberline {14.4.4}Uso del PSD per distinguere i $\gamma $}{127}
+\contentsline {subsection}{\numberline {14.4.5}Contatori proporzionali}{127}
+\contentsline {subsection}{\numberline {14.4.6}Telescopi per rinculo di protoni}{127}
+\contentsline {subsection}{\numberline {14.4.7}Spettromento con gate da cattura}{128}
+\contentsline {chapter}{\numberline {15}Bolometri}{129}
+\contentsline {section}{\numberline {15.1}Struttura di base di un bolometro}{129}
+\contentsline {section}{\numberline {15.2}Evoluzione di un segnale di un bolometro}{129}
+\contentsline {section}{\numberline {15.3}Fononi in un bolometro}{131}
+\contentsline {section}{\numberline {15.4}Risoluzione energetica nei bolometri}{132}
+\contentsline {section}{\numberline {15.5}L'assorbitore}{132}
+\contentsline {section}{\numberline {15.6}Il sensore}{132}
+\contentsline {subsection}{\numberline {15.6.1}Semiconductor Thermistors}{132}
+\contentsline {subsection}{\numberline {15.6.2}Transition Edge Sensors (TES)}{133}
+\contentsline {subsection}{\numberline {15.6.3}Altri termometri}{134}
+\contentsline {section}{\numberline {15.7}Il bagno termico}{134}
+\contentsline {subsection}{\numberline {15.7.1}L'unit\`a a diluizione}{135}
+\contentsline {section}{\numberline {15.8}Confronto con gli altri rivelatori}{136}
+\contentsline {section}{\numberline {15.9}Impiego}{136}

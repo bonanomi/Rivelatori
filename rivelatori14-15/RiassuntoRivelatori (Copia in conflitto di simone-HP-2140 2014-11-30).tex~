@@ -1,0 +1,612 @@
+\documentclass[12pt,a4paper,titlepage]{report}
+\special{papersize=210mm,297mm}
+\usepackage[italian]{babel}
+\usepackage{amsmath, amsfonts, amssymb, mathrsfs, dsfont}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{graphicx}
+\pagestyle{fancy}
+\begin{document}
+\begin{titlepage}
+\title{Riassunto di rivelatori di particelle}
+\author{Simone Bologna\\Universit\`a degli studi di Milano-Bicocca\\Corso di laurea magistrale in Fisica}
+\date{}
+\end{titlepage}
+\pagestyle{plain}
+\maketitle
+\tableofcontents
+\chapter{Interazione radiazione-materia}
+\section{Interazione tra particelle cariche pesanti e materia}
+L'interazione delle particelle cariche pesanti con la materia avviene attraverso una cessione graduale di energia agli elettroni,
+Questo comporta una eccitazione o ionizzazione di atomi; un parametro di particolare importanza \`e la \textbf{ionizzazione specifica}:
+essa indica la quantit\`a di ionizzazione prodotta per unit\`a di lunghezza.
+Nota l'energia media necessaria per produrre ionizzazione in un materiale e la ionizzazione media per unit\`a di lunghezza, \`e possibile legare questo parametro al \textbf{potere frenante}:
+\begin{equation*}
+S = \left \langle \frac{dE}{dx}\right \rangle
+\end{equation*}
+Viene, inoltre, definito il \textbf{raggio} (\textit{range}) come il tratto di materiale attraversato fino all'arresto e il
+\textbf{raggio medio} come il \textit{range} attraversato dalla met\`a delle particelle ad una data energia.
+Per via delle fluttuazioni nella cessione dell'energia alcune particelle percorrono un percorso pi\`u lungo di altre, per questo
+si parla di \textbf{raggio estrapolato} come il raggio ottenuto estrapolando il percorso dalla pendenza della curva di \textit{range}
+nel punto di raggio medio.
+La differenza tra i due raggi viene definita \textbf{\textit{straggling}}.\\
+\subsection{La formula di Bethe-Bloch}
+La perdita di energia delle particelle cariche pesanti nella materia pu\`o essere descritta dalla \textbf{formula di Bethe-Bloch}:
+\begin{equation*}
+\frac{S_{\text{coll}}}{\rho} = 4 \, \pi \, r_e^2 \, mc^2 \, N_A \, \frac{Z_m}{A} \, \frac{Z^2}{\beta^2}\left \{ \text{log} \left[ \frac{2 mc^2 \, \beta^2}{I(1-\beta^2)} \right] - \beta^2 \right\}
+\end{equation*}
+In particolare la formula descrive il \textbf{potere frenante massico}: $\rho$ indica la densit\`a, $r_e$ \`e il \textbf{raggio classico dell'elettrone}, $Z_m$ lo Z del materiale, $Z$ il numero atomico del proiettile e $I$ l'energia media di ionizzazione.
+Si pu\`o notare che la formula presenta una debole dipendenza dal materiale, in quanto il rapporto tra Z e A vale circa $0.5$ per molti materiali.
+\`E fondamentale notare la presenza di un minimo, ad energia relativistica, una particella con un energia dello stesso ordine del minimo viene detta \textbf{particella a minimo di ionizzazione}
+(\textit{minimum ionizing particle} (M.I.P.)).
+Ad alte energie si osserva un aumento dell'energia persa, questo \`e dovuto all'emissione di bremsstrahlung.
+\section{Interazione tra elettroni e materia}
+A differenza delle particelle pesanti, per gli elettroni ha poco senso parlare di cammino medio, in quanto essendo leggeri vengono
+fortemente deviati dalle loro interazioni, subendo a volte del \textit{backscattering}.
+Per questo motivo parla piuttosto di una distanza di penetrazione media, detta \textbf{percorso pratico o estrapolato}:
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=1]{RangeElettroni.png}
+\caption{Percorso pratico degli elettroni}
+\end{center}
+\end{figure}
+Inoltre \`e utilizzato il parametro $\eta$:
+\begin{equation*}
+\eta = \frac{\# \text{elettroni retrodiffusi}}{\# \text{elettroni incidenti}}
+\end{equation*}
+Per via della piccola massa degli elettroni, le interazioni con i nuclei sono fondamentali: possiamo osservare scattering multipli e perdite per irraggiamento.\\
+Quest'ultimo diventa predominante a energie relativistiche, in particolare le dipendenze \textit{non relativistiche} sono:
+\begin{gather*}
+S_{coll} \propto \frac{1}{E_k} \, \frac{Z}{A}\\
+S_{irr} \propto \frac{Z^2}{A}
+\end{gather*}
+mentre ad energie relativistiche diventano:
+\begin{gather*}
+S_{coll} \propto \frac{Z}{A}\\
+S_{irr} \propto \frac{Z^2}{A}\, E_k
+\end{gather*}
+Si definisce \textbf{energia critica}, il valore dell'energia cinetica per cui le due $S$ si equivalgono, esso vale circa:
+\begin{equation*}
+E_c = \frac{550}{Z} \text{MeV}
+\end{equation*}
+da cui si deduce che nei materiali pesanti l'irraggiamento diventa prevalente ad energie pi\`u basse.\\
+Un parametro fondamentale \`e la \textbf{lunghezza di radiazione}:
+\begin{equation*}
+X_0 \approx 170 \frac{A}{Z^2} \frac{\text{g}}{\text{cm}^2}
+\end{equation*}
+Essa indica la distanza media che un elettrone deve percorrere per osservare l'emissione di un quanto di energia comparabile a quella iniziale:\\
+Per quando riguarda lo spettro, in energia esso \`e quasi costante:
+\begin{equation*}
+E_{\gamma} * \frac{dN_{\gamma}}{dE_{\gamma}} = \text{costante}
+\end{equation*}
+da cui si deduce che un elettrone emette pi\`u fotoni a minore energia rispetto a quelli a maggiore energia.\\
+La distibuzione angolare dei fotoni emessi \`e perpendicolare alla direzione di moto nel caso di elettroni a bassa energia,
+mentre nel caso di alta energia l'angolo di emissione tende a diventare 0.
+
+\section{Interazione fotoni-materia}
+I fotoni possono interagire con la materia essenzialmente in 3 modi:
+\begin{itemize}
+\item Effetto fotoelettrico
+\item Effetto Compton
+\item Produzione di coppie
+\end{itemize}
+Altri processi importanti (ma che assorbono pochissima energia) sono lo scattering Thomson (ovvero la diffusione di un onda piana da parte di un elettrone) e
+lo scattering Rayleigh (diffusione elastica della luce).
+Il primo effetto \`e prevalente a basse energie (ma sopra la soglia dell'energia di legame) ed ha una sezione d'urto maggiore per gli elettroni maggiormente legati.
+Questo processo \`e spesso seguito da emissioni a cascata o transizioni Auger, queste ultime sono pi\`u frequenti nel caso di shell profonde di atomi pesanti.
+La sezione d'urto del fotoelettrico \`e proporzionale a $Z^5$.\\
+Il secondo \`e prevalente nelle energie intermedie (ovvero superiori al fotoelettrico, ma minori della produzione di coppie), a differenza degli altri due, che richiedono un atomo per assorbire il rinculo,
+pu\`o avvenire su elettroni liberi. 
+L'energia rilasciata aumenta all'aumentare dell'angolo di scattering e va come $(1-\text{cos} \theta)$.
+La sezione d'urto di questo processo a basse energie va come quella Thomson (che \`e costante), ad alte energie dipende da $\frac{\text{log}\, E}{E}$,
+per cui tende a 0. La dipendenza da Z \`e lineare, in quanto ogni elettrone reagisce indipendentemente dall'altro.\\
+\section{Interazione neutroni-materia}
+I neutroni interagiscono principalmente mediante l'interazione forte con i nuclei, questo significa che il loro raggio di interazione \`e nell'ordine del fm.
+Hanno 3 modi di interazione principali:
+\begin{itemize}
+\item Diffusione elastica e anelastica, in questo caso il neutrone interagisce con il nucleo cedendo parte della propria energia.
+Nel secondo caso il nucleo entra in uno stato eccitato.
+\item Cattura radiativa e non radiativa, in questo caso il neutrone viene inglobato nel nucleo;
+dopo l'assorbimento il nucleo pu\`o trovarsi in uno stato eccitato, in questo caso osserviamo l'emissione di radiazione: nel caso di fotoni si parla di cattura radiativa, 
+mentre nel caso di emissione di $\alpha$ e protoni si parla di cattura non radiativa.
+\item Fissione dei nuclei, in questo caso dopo la cattura il nucleo si trova in uno stato instabile e si scinde emettendo diversi neutroni e radiazione $\gamma$.
+\end{itemize}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=0.8]{InterazioneNeutroni.png}
+\caption{Interazioni dei neutroni}
+\end{center}
+\end{figure}
+Posta $\sigma_D$, $\sigma_C$, $\sigma_F$ la sezione d'urto dei due processi, allora la sezione d'urto totale risulta:
+\begin{equation*}
+\Sigma = N \, (\sigma_D + \sigma_C + \sigma_F)
+\end{equation*}
+con $N$ numero di nuclei per unit\`a di volume, per cui un fascio di $n_0$ neutroni seguir\`a la seguente legge:
+\begin{equation*}
+n(x) = n_0 \, e^{-\Sigma \, x}
+\end{equation*}
+Infine si definisce il libero cammino medio:
+\begin{equation*}
+\lambda = \Sigma^-1
+\end{equation*}
+per i neutroni veloci nell'ordine della decina di centimetri, per i lenti \`e nel centimetro.
+\chapter{Introduzione ai rivelatori di radiazione}
+\section{Classificazione dei rivelatori}
+I rivelatori vengono classificati in base a 3 fattori principali:
+\begin{itemize}
+\item La grandezza fisica da misurare
+\item Tipo di radiazione da rivelare
+\item Principio di funzionamento
+\end{itemize}
+\subsection{Tipo di grandezza fisica da misurare}
+I rivelatori possono essere catalogati in base alla grandezza che devono misurare:
+\begin{itemize}
+\item Flusso di particelle
+\item Conteggio di particelle
+\item Misure di tempo
+\item Misure di grandezze ''cinetiche``:
+\begin{itemize}
+\item Energia
+\item Velocit\`a
+\item Momento
+\end{itemize}
+\end{itemize}
+In alcuni casi i rivelatori possono misurare pi\`u grandezze simultaneamente.
+\subsection{Tipo di radiazione rivelata}
+Alcuni tipi fondamentali sono:
+\begin{itemize}
+\item Spettroscopia $\alpha$
+\item Spettroscopia $\beta$
+\item Spettroscopia $\gamma$
+\item Neutroni
+\item Neutrini
+\item $\gamma$ ed elettroni ad alta energia
+\item Adroni ad alta energia
+\end{itemize}
+\subsection{Principio di funzionamento}
+Esistono diversi principi:
+\begin{itemize}
+\item Ionizzazione di semiconduttori solidi cristallini o gas
+\item Eccitazione atomica, scintillatori
+\item Polarizzazione di materiali ed emissione Cherenkov, utilizzati per misure relativistiche (misure di fattori $\beta$ e $\gamma$ relativistici)
+\item Misura di calore prodotto dal passaggio di una particella
+\end{itemize}
+\section{Misure in regime impulsivo}
+I rivelatori a ionizzazione ed eccitazione possono essere utilizzati per effettuare misure di energia di singola particella.
+Possiamo immaginare, infatti, che una particella di energia $E$ liberi una quantit\`a di carica $Q$ proporzionale all'energia,
+raccogliendo questa carica su un condensatore si ottiene una tensione pari a $V_M = \frac{Q}{C}$.
+Questo significa che vale $V \propto Q \propto E$ per cui $V = K \cdot E$, dove $K$ \`e una costante che pu\`o essere ricavata mediante il processo di calibrazione 
+dell'apparato.
+\subsection{La spettroscopia}
+Quando eseguo una misura di energia sono interessato a studiarne la distribuzione, si parla in questo caso di \textbf{misure di spettroscopia}.
+In pratica l'operazione che eseguo \`e quella di dividere lo spettro in una serie di intervalli uguali di dimensione $\Delta E$ e conteggiare il numero di particelle
+di energia compresa tra $E$ e $E + \Delta E$.
+\begin{figure}[htb]
+\begin{center}
+	\includegraphics[scale=1]{Spettroscopia.png}
+\caption{Esempio di spettro}
+\end{center}
+\end{figure}
+Rimpicciolendo il numero di intervalli (in condizioni sperimentali questa suddivisione pu\`o essere spinta fino ad un certo punto) ottengo uno \textbf{spettro continuo} $\frac{dN}{dE}$.
+A questo punto per conoscere il numero di particelle compreso tra due energie sar\`a sufficiente eseguire l'integrale dello spettro tra i due punti.
+\subsection{Catena di lettura}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=1]{CatenaDiLettura.png}
+\caption{Catena di lettura}
+\label{fig:CatLettura}
+\end{center}
+\end{figure}
+La figura~\ref{fig:CatLettura} mostra la tipica catena di lettura di una spettroscopia:
+\begin{enumerate}
+\item Il \textbf{rivelatore}, tramite l'elettronica, produce un segnale proporzionale in tensione all'energia della particella, il segnale pu\`o essere soggetto ad un amplificazione
+\item L'\textbf{Analog to Digital Converter} converte l'ampiezza del segnale ricevuto in una serie di impulsi logici, quantizzando l'ampiezza in una scala tra 1 e $2^n$ con $n$ numero di bit
+\item Il \textbf{Multi Channal Analyzer} produce lo spettro, esso \`e formato da $2^n$ canali che conteggiano gli impulsi logici ricevuti, generando cos\`i lo spettro differenziale
+\end{enumerate}
+\section{Propriet\`a dei rivelatori}
+Le caratteristiche fondamentali di un rivelatore sono:
+\begin{itemize}
+\item Efficienza
+\item Risoluzione energetica
+\item Risoluzione spaziale
+\item Risoluzione temporale
+\end{itemize}
+\subsection{Efficienza}
+L'\textbf{efficienza assoluta} di un rivelatore \`e definita come:
+\begin{equation*}
+\epsilon_{abs} = \frac{\text{\# di quanti rivelati}}{\text{\# di quanti emessi}}
+\end{equation*}
+L'efficienza assoluta dipende da diversi fattori:
+\begin{enumerate}
+\item Geometria del rivelatore
+\item Attenuazione dal materiale
+\item Efficienza di interazione
+\item Efficienza di registrazione
+\end{enumerate}
+\subsubsection{Fattori geometrici}
+Supponiamo di avere una sorgente che emette radiazione in modo isotropo, allora l'angolo solido coperto dal rivelatore risulta importante
+per definire il \textbf{fattore geometrico}:
+\begin{equation*}
+G = \frac{\Omega}{4 \, \pi}
+\end{equation*}
+con $\Omega$ angolo solido coperto dal rivelatore:
+\begin{equation*}
+\Omega = \int_A dA \frac{\text{cos} \, \alpha }{r^2} 
+\end{equation*}
+con $A$ superficie del rivelatore e $\alpha$ angolo tra la normale della superficie $dA$ e la congiungente tra $dA$ e la sorgente.
+\subsubsection{Attenuazione del materiale}
+\`E necessario tener conto dell'effetto che il materiale ha sulla radiazione, in particolare possono esserci:
+\begin{itemize}
+\item Effetti di autoassorbimento della sorgente, ovvero la sorgente assorbe parte dell'energia che essa stessa emette (sorgenti spesse)
+\item Effetti di assorbimento legati a materiale interposto tra sorgente e rivelatore, ad esempio dell'aria residua in casi di vuoto non ben fatto
+\item Assorbimenti di energia nelle regioni di volume morto del rivelatore, ovvero regioni dove non vengono rivelati i depositi di energia da parte della radiazione.
+Questo pu\`o accadere ad esempio nell'involucro del rivelatore.
+\end{itemize}
+\subsubsection{Efficienza di interazione}
+Si definisce l'\textbf{efficienza di interazione} come:
+\begin{equation*}
+I = \frac{\text{\# di impulsi registrati}}{\text{\# di quanti di radiazione che incidono sul volume vivo}}
+\end{equation*}
+Per dei fotoni incidenti, valendo $n(x) = n_0 \, (1-\text{exp}(- \mu \cdot x))$ l'efficienza risulta:
+\begin{equation*}
+I = (1-\text{exp}(- \mu \cdot x))
+\end{equation*}
+Per le particelle cariche $I \approx 1$ in quanto \`e sufficiente una qualsiasi coppia elettrone-ione per avere una rivelazione.
+\subsubsection{Efficienza di registrazione}
+Viene definito come:
+\begin{equation*}
+R = \frac{\text{\# di impulsi registrati}}{\text{\# di interazioni}}
+\end{equation*}
+\subsubsection{Altre definizioni}
+L'\textbf{efficienza intrinseca} indica l'efficienza del rivelatore indipendentemente dall'angolo solido coperto:
+\begin{equation*}
+\epsilon_{int} = \epsilon_{abs} \frac{4 \, \pi}{\Omega} = \frac{\epsilon_{abs}}{G}
+\end{equation*}
+L'\textbf{efficienza al picco}:
+\begin{equation*}
+\epsilon_{ip} = \frac{\text{\# di conteggi ad energia piena}}{\text{\# di quanti di radiazione che incidono sul rivelatore}}
+\end{equation*}
+\subsection{Risoluzione energetica}
+Supponiamo di avere un rivelatore che emette radiazione ad energia $E$, osservando lo spettro differenziale prodotto dal MCA
+si osserver\`a che esso non \`e formato da un'unica colonna, ma sar\`a formato da pi\`u colonne a distribuzione simil-gaussiana.
+La \textbf{Full Width at Half Maximum} (FWHM) di questa distribuzione viene utilizzata per misurare la risoluzione energetica del dispositivo.
+In particolare la FWHM pu\`o essere data in V o in eV, moltiplicando il voltaggio per il fattore di calibrazione.\\
+Il deterioramento della risoluzione pu\`o essere dovuto a rumore sulla linea di base (fig.~\ref{fig:rumore}) o a fluttuazioni nella quantita di ionizzazione prodotta.
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[scale=0.8]{Rumore.png}
+\caption{Rumore sulla linea di base}
+\label{fig:rumore}
+\end{center}
+\end{figure}
+Altre cause del peggioramento della risoluzione possono essere trovate nella dipendenza dalla posizione della risposta del rivelatore e nella deriva temporale del fattore di calibrazione.
+\subsubsection{Fluttuazioni nella generazione della carica}
+Supponiamo di aver liberato $n$ portatori di carica, allora $Q = n \cdot q$ e $E = N \cdot \frac{Q}{C}$ per cui $E \propto n$,
+poich\`e la ionizzazione \`e un processo statistica $n$ fluttua, le fluttuazioni di $n$ possono essere viste come un incertezza su $H$.\\
+Cerchiamo di valutare quest'incertezza, il processo di ionizzazione \`e di tipo poissoniano:
+\begin{equation}
+P(n) = \frac{(N)^n \, e^{-N}}{n!}
+\end{equation}
+con $N$ numero di cariche mediamente liberate da una particella ad energia $E$ e $P(n)$ probabilit\`a di liberare $n$ cariche.
+La varianza sar\`a $\sigma^2 = N$, se il numero di cariche liberate \`e sufficientemente elevato, la distribuzione pu\`o essere approssimata con una gaussiana.
+Dato che $H = \frac{q \cdot n}{C}$ allora $\sigma_H = \frac{q}{C} \sigma_N = \frac{q}{C} \sqrt{N}$, per le gaussiane:
+\begin{equation*}
+\text{FWHM} = 2.35 \cdot \sigma_H 
+\end{equation*}
+mentre la risoluzione percentuale risulta:
+\begin{equation*}
+\frac{\text{FWHM}}{H_{max}} = \frac{2.35 \cdot \sigma_H}{H} = 2.35 \frac{1}{\sqrt{N}}
+\end{equation*}
+In realt\`a il processo non \`e puramente poissoniano, in quanto gli eventi non sono del tutto indipendenti, per cui vale:
+\begin{equation*}
+\sigma_{N}^2 = F \cdot N
+\end{equation*}
+con $F$ \textbf{fattore di Fano}.
+\subsection{Risoluzione spaziale}
+Si pu\`o ottenere della risoluzione spaziale usando rivelatori traccianti, rivelatori con elettrodi segmentati o matrici di rivelatori identici.
+Si definisce \textbf{precisione spaziale} la precisione con la quale viene ricostruita la traccia lasciata dalla particella:
+i punti della traccia possono essere interpolati linearmente per ottenere una traccia ben definita, la precisione viene calcolata come:
+\begin{equation*}
+\sigma^2 = \frac{\sum (x_{mis} - x_{interp}}{N-2}
+\end{equation*}
+$N-2$ \`e legato al fatto che 2 gradi di libert\`a vengono persi per via del fit lineare.\\
+La \textbf{risoluzione spaziale} viene calcolata come la minima distanza tra due tracce risolte individualmente.
+\subsection{Risoluzione temporale}
+La \textbf{risoluzione temporale} \`e il minimo intervallo di tempo tra due eventi consecutivi che il rivelatore \`e in grado di distinguere,
+corrisponde al \textbf{tempo morto} del rivelatore.
+I fattori che incidono su questa caratteristica sono legati al metodo e fisica di rivelazione del dispositivo e alla strumentazione elettronica in lettura.
+Se due eventi non possono essere risolti temporalmente allora pu\`o avvenire un \textit{pile-up}, questo pu\`o significare:
+\begin{itemize}
+\item un errato conteggio degli eventi
+\item un errata valutazione dell'energia che pu\`o essere valutata come la somma delle due
+\end{itemize}
+\`E fondamentale riuscire a produrre delle correzioni a questo problema, prima \`e necessario distinguere tra due tipi di rivelatore: paralizzabile e non (figura~\ref{fig:tempoMorto}).
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=0.90]{TempoMorto.png}
+\caption{Distinzione tra rivelatore paralizzabile e non.}
+\label{fig:tempoMorto}
+\end{center}
+\end{figure}
+Poniamo $n$ tasso di interazioni e $m$ tasso di rivelazioni, allora per un \textbf{rivelatore non paralizzabile} il tempo morto totale risulta
+$\tau_{tot} = \tau \cdot m$, per cui il numero di interazioni reali avvenute durante questo lasso di tempo vale $n\cdot m \cdot \tau$.
+Da ci\`o si deduce che in un rivelatore non paralizzabile il tasso di eventi persi vale $n \cdot (m\,\tau) = n - m$, in conclusione:
+\begin{equation}\label{eq:rivnonpar}
+n = \frac{m}{1-m\cdot \tau}
+\end{equation}
+Si osserva che nel caso di tassi $n$ molto elevati $m \approx \frac{1}{\tau}$.\\
+Nel caso di un \textbf{rivelatore paralizzabile} la probabilit\`a che un intervallo sia lungo t \`e data dalla probabilit\`a che
+in tale intervallo non avvenga alcun evento. 
+Questa probabilit\`a \`e data dalla distribuzione di Poisson con $\lambda = n \cdot t$ e vale:
+\begin{equation*}
+P(0,t) dt = e^{-nt} dt
+\end{equation*}
+Normalizzando:
+\begin{equation*}
+P(0,t) dt  = \frac{e^{-nt}}{n} dt
+\end{equation*}
+per cui la probabilit\`a che un intervallo di tempo morto sia pi\`u lungo di $\tau$ \`e:
+\begin{equation*}
+P(\tau) = \int_{\tau}^{\infty} P(t) \, dt = e^{-n \tau}
+\end{equation*}
+Per cui il tasso apparente $m$ risulta:
+\begin{equation} \label{eq:rivpar}
+m=n e^{-n\tau}
+ \end{equation}
+\subsubsection{Misura del tempo morto}
+Una misura del tempo morto pu\`o essere ottenuta utilizzando una sorgente a vita media bassa, poniamo $n_b$ il tasso del fondo ambientale:
+\begin{equation*}
+n = n_0^{-\lambda t} + n_b
+\end{equation*}
+Se la sorgente ha vita media bassa allora $n_b \approx 0$:
+\begin{equation*}
+n = n_0^{-\lambda t}
+\end{equation*}
+Nel caso di un rivelatore paralizzabile da~\ref{eq:rivpar} si ha che:
+\begin{equation*}
+n = m \, e^{n\tau } = m \, \text{exp}(n_0 \, e^{-\lambda t})
+\end{equation*}
+introducendo questa espressione e applicando i logaritmi si ottiene:
+\begin{equation} \label{eq:rivpartau}
+\lambda t + \text{ln} m = - n_0 \tau e^{-\lambda t} + \text{ln} n_0
+\end{equation}
+Nel caso di un rivelatore non paralizzabile da~\ref{eq:rivnonpar} si ha:
+\begin{equation} \label{eq:rivnonpartau}
+m e^{\lambda t} = -n_0 \tau m + n_0
+\end{equation}
+Ponendo nelle equazioni~\ref{eq:rivpartau} e~\ref{eq:rivnonpartau} il lato sinistro come $y$ e $x = e^{\lambda \, t}$ 
+dal coefficiente angolare \`e possibile ricavare $\tau$ e identificare il modello di rivelatore adatto.
+\chapter{Scintillatori}
+Gli scintillatori si basano sull'emissione luminosa da parte di atomi eccitati:
+una particella ionizzante deposita la propria energia sul materiale causando una eccitazione atomica o molecolare e, in seguito,
+emissione di radiazione luminosa.
+Gli scintillatori hanno usi multipli:
+\begin{itemize}
+\item Spettroscopia $\gamma$
+\item Calorimetria
+\item Sistema T.O.F.
+\item Sistema di trigger
+\item Sistema di veto
+\item Traccianti
+\end{itemize} 
+Possono essere divisi in due macrocategorie:
+\begin{itemize}
+\item Inorganici, caratterizzati da una buona resa in luce (e quindi una maggiore efficienza), ma anche pi\`u lenti
+\item Organici, con una resa in luce minore, ma una maggiore velocit\`a
+\end{itemize}
+\section{Meccanismo di scintillazione}
+\subsection{Scintillatori inorganici}
+\begin{figure}[htb]
+\begin{center}
+\includegraphics{LivelliEnergeticiScintillatore.png}
+\caption{Livelli energetici in uno scintillatore inorganico}
+\label{fig:livInorganico}
+\end{center}
+\end{figure}
+La figura~\ref{fig:livInorganico} mostra il funzionamento di uno scintillatore inorganico.\\
+In uno scintillatore organico per stimolare le attivazioni vengono introdotte delle impurezze, quando un elettrone viene portato
+dalla banda di valenza a quella di conduzione entro qualche ns si ricombina con la lacuna emettendo radiazione.
+Per via delle impurezze a volte accade che l'elettrone si vada a posizionare in un livello energetico dell'impurezza, questo
+livello energetico ''trappola`` pu\`o richiedere tempi lunghi fino alle centinaia di ms per la diseccitazione. 
+In questo caso avviene una fosforescenza.\\
+Questi tipi di scintillatori hanno un elevato $Z$ e alta densit\`a, rendendoli adatti alla rivelazione di particelle cariche e raggi $\gamma$.
+\subsection{Scintillatori organici}
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[scale=1.00]{LivelliEnergeticiScintillatoreOrganico.png}
+\caption{Livelli energetici di uno scintillatore organico}
+\label{fig:livOrganico}
+\end{center}
+\end{figure}
+Gli scintillatori organici si basano sull'eccitazione di molecole di tipo organico, in particolare queste molecole sono caratterizzate
+da orbitali molecolari di tipo $\pi$ tra le molecole di carbonio che possono essere stimolati per emettere luce nell'ultravioletto.\\
+Posso avere scintillatori a monocristalli, liquidi o plastici a seconda dell'uso che si intende fare.\\
+Il grande pregio di questo tipo di rivelatore sta nella velocit\`a di risposta che \`e nei ns.
+Sono, inoltre, molto economici.
+\section{Caratteristiche di uno scintillatore ideale}
+\begin{enumerate}
+\item Alta efficienza di scintillazione
+\item Conversione lineare $S = E \cdot L$
+\item Trasparenza 
+\item Tempo di emissione breve
+\item Buone propriet\`a ottiche e meccaniche. Buona maneggiabilit\`a.
+\item Indice di rifrazione simile al vetro, per evitare riflessione totale.
+\end{enumerate}
+\subsection{Efficienza di scintillazione}
+Uno scintillazione ideale dovrebbe avere un elevato $S$:
+\begin{equation*}
+S = \frac{L}{E} 
+\end{equation*}
+con $L$ energia luminosa e $E$ energia entrante.
+Normalmente questo fattore \`e molto contenuto, nell'ordine del 10\%, per il NaI vale 12\% (il migliore).
+Il resto dell'energia finisce in fononi e ionizzazione.\\
+La \textbf{formula di Birks} (vale sono per gli scintillatori organici) afferma:
+\begin{equation*}
+\frac{dL}{dx} = \frac{S \frac{dE}{dx}}{1 + k_B \, \frac{dE}{dx}}
+\end{equation*}
+con $k_B$ costante di proporzionalit\`a di Birks.
+Per le particelle $\alpha$ $\frac{dE}{dx}$ \`e molto grande per cui si ricava $\frac{dL}{dx} = \frac{S}{k_B}$, per gli elettroni
+$\frac{dE}{dx}$ \`e piccolo per cui il termine al denominatore pu\`o essere approssimato a 1, ottenendo $L = S \cdot E$.\\
+L'efficienza dipende dalla temperatura (fig~\ref{fig:traspInorganici}), dalle impurezze (per via del quenching) e si deteriora con il tempo.
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=1]{TrasparenzaOrganici.png}
+\caption{Andamento della trasparenza con la temperatura, esistono temperature ottimali.}
+\label{fig:traspInorganici}
+\end{center}
+\end{figure}
+\subsection{Linearit\`a}
+La relazione $S = E \cdot L$ deve essere lineare, in particolare $S$ non dovrebbe dipendere dalla posizione dello scintillatore.
+In generale $S$ dipende dalla particella, come si \`e visto dalla formula di Birks e per particelle che disperdono molta energia la relazione perde in linearit\`a:
+per elettroni sufficientemente energetici (sopra il centinaio di keV) la relazione \`e lineare, per protoni o $\alpha$ non \`e lineare ad alte energie (si osservano
+effetti di quenching tra molecole).
+\subsection{Trasparenza}
+\`E importante che lo spettro di assorbimento si sovrapponga il meno possibile con lo spettro di emissione, in modo da avere un materiale trasparente ai fotoni e
+permettere ad essi di uscire dal materiale scintillante.
+\subsection{Tempo di emissione}
+Per avere un'elevata risoluzione temporale \`e necessario che la costante di tempo $\tau$ sia molto breve:
+\begin{equation*}
+I(t) = I_0 e^{-\frac{t}{\tau_0}} + I_1 e^{-\frac{t}{\tau_1}} - I_0 e^{-\frac{t}{\tau_p}}
+\end{equation*}
+con $\tau_0$ tempo di scintillazione, $\tau_1$ tempo di fosforescenza e fluorescenza ritardata e $\tau_p$ tempo per il popolamento dei livelli eccitati.
+\subsection{Proprieta ottiche e meccaniche}
+Per propriet\`a ottiche si intende che la geometria dello scintillatore deve essere tale da avere una buona raccolta di luce, per questo \`e necessario
+che i cristalli abbiano buone propriet\`a meccaniche: essi devono essere, infatti, di dimensioni e forma variabili secondo le necessit\`a.\\
+Per quanto riguarda la maneggevolezza alcuni cristalli sono igroscopici, ovvero assorbono l'umidit\`a dell'aria, per questo devono essere isolati e sotto vuoto, e possono
+essere fragili.
+\section{La raccolta della luce}
+Quando uno scintillatore emette luce, essa viene diffusa in modo isotropico, per questo motivo \`e importante avere un buon meccanismo di raccolta della luce.
+Per evitare che la luce esca dal cristallo senza andare sul fotocatodo si usa il meccanismo della riflessione totale:
+\begin{equation*}
+\text{sin} \, \theta_c = \frac{n_1}{n_0}
+\end{equation*}
+Questo permette di avere minori perdite alla superficie (l'efficienza \`e sul 80\%) tuttavia rende difficoltosa la trasmissione del segnale al fotocatodo.
+Per questo sulla superficie rivolta verso il fotocatodo viene posto un materiale di accoppiamento, ovvero un materiale a indice di rifrazione intermedio, come
+del grasso ottico o del silicone.
+Siccome il fotocatodo lavora con campi elettrici e magnetici intensi \`e necessario porlo ad una certa distanza dal cristallo, pe questo
+\`e necessario guidare la luce verso il fotocatodo mediante l'uso di \textbf{guide di luce}, fibre a geometria cilindrica che trasportano la radiazione luminosa.
+\section{Il fotocatodo}
+Il fotocatodo ha il ruolo di emettere fotoelettroni quando fotoni di sufficiente energia incidono su di esso.
+Questo dispositivo non \`e sensibile a tutta la radiazione luminosa: 
+per ottenere l'emissione di un fotoelettrone \`e necessario che il fotone incidente
+abbia energia sufficiente a portare un elettrone dalla banda di valenza del materiale alla
+banda di conduzione ed a farlo uscire dalla superficie del fotocatodo (generalmente $E_{\gamma} > 2$ eV).
+Per questo motivo il fotocatodo \`e in grado di rivelare solo una certa porzione dello spettro
+luminoso, in genere a partire dal giallo-verde, in base al materiale che lo compone. \\
+Per costruire i fotocatodi si utilizzano dei semiconduttori drogati ad affinit\`a elettronica negativa, ad esempio GaP drogato di tipo p con zinco.\\
+Quando un elettrone viene portato in banda di conduzione, esso inizia ad eccitare i fononi del cristallo,
+disperdendo la propria energia e raggiungendo (generalmente entro 1 ps) il fondo della banda.
+Una volta che si trova in questo stato, l'elettrone impiega un tempo nell'ordine dei 100 ps per ricombinarsi con una
+lacuna, tornando in banda di valenza.
+L'energia sul fondo della banda di conduzione non \`e sufficiente per permettere agli elettroni di fuggire dal fotocatodo:
+tra il materiale ed il vuoto esiste, infatti, una barriera di potenziale (detta affinit\`a elettronica) che impedisce agli elettroni di lasciare il semiconduttore.
+Gli unici elettroni ad avere energia sufficiente per superare la barriera sono quelli che
+hanno eccitato pochi fononi, per cui gli elettroni possiedono un tempo di 1 ps per lasciare il fotocatodo.
+Questo tempo \`e molto breve e pone seri limiti allo spessore del materiale, in quanto gli elettroni possono percorrere poco spazio.
+Per aumentare l'efficienza dei fotocatodi, essi vengono contruiti in modo da avere un'affinit\`a elettronica negativa e permettere agli elettroni sul fondo della banda di conduzione di avere energia sufficiente per fuggire.
+Questo effetto viene ottenuto deponendo uno strato monoatomico di un materiale elettropositivo (ad esempio il cesio) sulla superficie del dispositivo:
+poich\'e gli elettroni del cesio sono poco legati, essi vengono attratti dalle lacune del semiconduttore, ionizzando lo strato ed abbassando l'affinit\`a elettronica.
+\subsection{Fabbricazione dei fotocatodi}
+Esistono 2 categorie di fotocatodi, quelli opachi, con uno spessore maggiore della profondit\`a di fuga degli elettroni e quelli semitrasparenti.
+In quelli opachi gli elettroni vengono prelevati dallo stesso lato in cui la luce incide sul materiale, in quelli semitrasparenti avviene l'opposto, in quanto la luce
+riesce a raggiungere l'altro estremo del materiale.\\
+Ad ogni modo \`e fondamentale che i fotocatodi abbiano uno spessore uniforme, per avere un estrazione uniforme indipendentemente dalla regione colpita dalla radiazione.
+Esistono fotocatodi bialcalini o multialcalini a seconda della risposta alla radiazione che si desidera ottenere.
+\section{Il fotomoltiplicatore}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[scale=0.8]{Fotomoltiplicatore.png}
+\caption{Schema di un fotomoltiplicatore}
+\label{fig:fotomolt}
+\end{center}
+\end{figure}
+Il rendimento quantico di un fotomoltiplicatore viene definito come:
+\begin{equation*}
+\text{Q.E.} = \frac{N_{pe}}{N_{fot}} \approx 20\% - 30\%
+\end{equation*}
+esso dipende dalla lunghezza d'onda del fotone incidente.
+Un fotomoltiplicatore si basa sulla moltiplicazione di fotoelettroni attraverso stadi successivi chiamati \textbf{dinodi}.
+Quando un fotoelettrone lascia il fotocatodo, esso viene accelerato da un potenziale verso i dinodi, l'urto con i dinodi libera della carica che
+attraverso ulteriori urti viene moltiplicata e, infine, raccolta sull'anodo, producendo un segnale elettrico misurabile.
+Tipicamente ogni urto con un dinodo porta ad un guadagno da 3 a 50 elettroni, il prodotto di tutti i guadagni da il guadagno globale.
+Ad esempio 10 dinodi con guadagno $g=4$ moltiplicheranno di un fattore $G=4^{10}\approx 10^6$.\\
+Di particolare importanza \`e il rumore termoionico dovuto ad emissioni termiche di elettroni da parte del fotocatodo:
+a 300 K, $k_b T$ vale circa 25 meV, tuttavia per le code della distribuzione si ha che alcuni elettroni hanno un energia maggiore del lavoro di estrazione, 
+causando falsi segnali.
+Per questo motivo \`e necessario tenere il fotocatodo freddo, in genere per i semiconduttori si hanno dai 100 ai 10000 elettroni/cm$^2$ e s.\\
+La \textbf{risoluzione energetica} \`e fortemente dominata dalla moltiplicazione al primo dinodo, dove gli elettroni sono pochi e 
+$\frac{\sigma_E}{E} \propto \frac{1}{\sqrt{n}}$.
+\subsection{I dinodi}
+Supponiamo che un fotone liberi un elettrone e che esso sia accelerato da una differenza di potenziale di 100 V verso il primo dinodo.
+Essendo il gap nell'ordine dei 2-3 eV, verranno eccitati circa 30 elettroni, di cui solo 4-5 usciranno dal dinodo per andare verso lo stadio successivo.
+Aumentando il potenziale la quantit\`a di elettroni liberati cresce, tuttavia essi verranno liberati pi\`u in profondit\`a.
+Per questo motivo esiste un valore ottimale per il potenziale di accelerazione.\\
+In genere per i dinodi standard il valore di moltiplicazione \`e 5, per i materiali ad affinit\`a elettronica negativa si possono raggiungere fattori di moltiplicazione
+pari a 20-30.
+\section{Alimentazione del sistema a dinodi}
+Chiaramente \`e necessario che la tensione dell'anodo sia maggiore di quella del fotocatodo, questo pu\`o essere ottenuto in due modi:
+\begin{itemize}
+\item fotocatodo a massa e anodo a tensione positiva
+\item fotocatodo a tensione negativa e anodo a massa
+\end{itemize}
+Per alimentare i vari stadi di moltiplicazione \`e comodo usare un partitore resistivo (figura~\ref{fig:partitoreDinodi}).
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[scale=0.80]{PartitoreDinodi.png}
+\caption{Esempio di partitore resistivo per i dinodi}
+\label{fig:partitoreDinodi}
+\end{center}
+\end{figure}
+Chiaramente un sistema di questo tipo porta ad avere delle correnti di fuga che per effetto Joule portano ad un aumento della temperatura del dispositivo.
+Questa corrente, tuttavia, non pu\`o essere minimizzata troppo, in quanto deve essere maggiore della corrente di fotomoltiplicazione, in modo da mantenere
+i potenziali tra i dinodi costanti.
+Questo problema diventa rilevante negli ultimi stadi, dove il numero elevato di elettroni estratti porta a correnti di moltiplicazione intense.\\
+Parlando quantitativamente si ha che in un tipico evento di scintillazione vengono liberati 1000 elettroni, un tipico fattore di moltiplicazione in un fototubo
+\`e $10^6$, per cui si hanno $10^9$ elettroni nell'ultimo stadio di moltiplicazione.
+Una tipica sorgente di laboratorio genera $10^5$ eventi ogni secondo, per un totale di $10^{14}\cdot 1.6 \cdot 10^{-19} = 16 \mu$A di corrente media.
+Questa corrente media non provoca grandi riscaldamenti per effetto Joule, per cui una corrente di fuga di questo ordine non \`e tipicamente problematica;
+tuttavia, questo ipotizza di avere un flusso continuo di elettroni, mentre nella realt\`a si hanno eventi impulsati di durata molto breve (nell'ordine del ns), per cui
+la corrente massima diventa:
+\begin{equation*}
+i \asymp \frac{10^9 \cdot 10^{-19}}{10^{-9}} \asymp 100 \text{mA}
+\end{equation*}
+che \`e una quantit\`a notevole.
+Per questo motivo ci si accontenta di usare una corrente nell'ordine della corrente media insieme a dei \textbf{condensatori di stabilizzazione}.
+I condensatori di stabilizzazione vengono caricati dalla corrente di fuga nei momenti di quiete e servono a fornire la carica nella fase di fotomoltiplicazione.
+Se i rate non sono troppo intensi il sistema \`e equivalente.
+\section{Caratteristiche dei fototubi}
+Le caratteristiche fondamentali sono:
+\begin{enumerate}
+\item Struttura, ogni fototubo ha una propria forma (circolare, esagonale,...)
+\item Propriet\`a temporali, come tempo di risposta e risoluzione
+\item Tensione e correnti massime, per determinare il guadagno massimo del dispositivo
+\item Sensibilit\`a alla luce e alla potenza radiante (per usi in modo continuo)
+\item Corrente di buio, ovvero la corrente che scorre nel dispositivo per catodo non illuminato
+\item Linearit\`a del dispositivo, fortemente dipendente dalle fluttuazioni di tensione ai dinodi
+\item Impulsi spuri e rumore associati ai fotomoltiplicatori
+\item Disuniformit\`a nel fotocatodo, possono essere nella risposta, per via delle fluttuazioni di spessore, o nella raccolta al primo dinodo, 
+che determina le fluttuazioni maggiori nella misurazione dell'energia.
+\item Variazioni di guadagno in base al tasso di conteggi, per il motivo detto prima della compensazione della carica
+\end{enumerate}
+\section{Impulsi prodotti dal fototubo}
+La legge di produzione dei fotoni \`e $I(t) = I_0$ exp$(-\lambda t)$ per cui la corrente di elettroni sar\`a
+\begin{equation*}
+ i(t) = i_0 \text{exp}(-\lambda t)
+\end{equation*}
+Da $\int_0^{\infty} i(t) dt$ si ricava
+\begin{equation*}
+i_0 = \lambda Q
+\end{equation*} 
+per cui $i(t) = \lambda Q$ exp$(\lambda t)$.\\
+Il circuito di lettura del segnale pu\`o essere visto come un circuito RC, per cui la tensione sar\`a:
+\begin{equation*}
+V(t) = \frac{1}{\lambda - \theta} \frac{\lambda Q}{C} (e^{-\theta t} - e^{-\lambda t})
+\end{equation*}
+sovrapposizione degli effetti di resistenza e condensatore.\\
+Se il tempo di decadimento \`e molto inferiore del tempo di scarica RC del sistema, allora il segnale pu\`o essere approssimato come:
+\begin{equation*}
+V(t) = \frac{Q}{C}  (e^{-\theta t} - e^{-\lambda t})
+\end{equation*}
+\end{document}

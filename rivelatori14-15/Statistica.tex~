@@ -1,0 +1,129 @@
+\chapter{Cenni di statistica}
+La statistica \`e fondamentale per verificare il buon funzionamento della strumentazione ed interpretare il significato delle misure sperimentali.
+Si ricorda il concetto di media sperimentale e vera (coincidono solo per N elevati) e di residuo e scarto (il residuo \`e lo scarto dei dati sperimentali
+dalla media sperimentale).
+Inoltra si ricorda la varianza sperimentale:
+\begin{equation*}
+s^2 = \frac{1}{N} \sum_{i=1}^N (x_i - \bar{x})^2 = \frac{1}{N-1} \sum_{i=1}^N (x_i - \bar{x}_e)^2
+\end{equation*}
+dove, non conoscendo la media vera, si usa la sperimentale e si sovrastima.
+\section{Distribuzioni}
+Spesso si costruiscono modelli statistici per i vari processi e li si confonta con i dati sperimentali.
+Modelli ricorrenti sono quello di Bernoulli:
+\begin{equation*}
+P(x) = \frac{n!}{(n-x)!n!} p^x (1-p)^{(n-x)}
+\end{equation*}
+con $n$ numero di prove, $x$ numero di prove riuscite e $p$ probabilit\`a di un successo.\\
+Un altro modello \`e quello di Poisson, un approssimazione di Bernoulli per basse probabilit\`a:
+\begin{equation*}
+P(x) = \frac{(np)^{x} e^{-np}}{x!}
+\end{equation*}
+Questa distribuzione non \`e simmetrica, in quanto il valore pi\`u probabile non coincide con il valore medio $np$.\\
+Un ultimo modello \`e quello di Gauss, per basse probabilit\`a e alte medie:
+\begin{equation*}
+P(x) = \frac{1}{\sqrt{2\pi \bar{x}}}\,\text{exp}\left(-\frac{(x-\bar{x})^2}{2\bar{x}}\right)
+\end{equation*}
+\section{Confronto con i dati sperimentali}
+Misurata sperimentalmente $F(x)$, ovvero la distribuzione sperimentale, si pongono $\bar{x}$ e $\sigma$ nel modo definito prima e si confronta
+la distribuzione con $P(x)$. 
+Un primo approccio \`e grafico, per conoscere qualitativamente l'andamento, successivamente si procede con il test $\chi^2$.
+\begin{equation*}
+\chi^2 = \sum \frac{(x-\bar{x})^2}{\bar{x}} = (N-1)\frac{s^2}{\bar{x}}
+\end{equation*}
+per cui:
+\begin{equation*}
+\frac{\chi^2}{(N-1)} = \frac{s^2}{\bar{x}}
+\end{equation*}
+detto anche chi-quadro ridotto.
+Esso deve essere circa 1, o comunque tra 0.5 e 1.5; un $\chi^2$ troppo alto vuol dire che la serie di dati non \`e compatibile in quanto le
+fluttuazioni sperimentali sono troppo elevate rispetto al modello, nel caso sia piccolo vuol dire che si hanno fluttuazioni troppo piccole.
+\section{Singola misura}
+Supponendo di poter prendere la una singola misura statistica (ad esempio un conteggio), quello che si pu\`o dire \`e che la gaussiana della distribuzione \`e centrata
+su quella misura con varianza pari al valore della misura stessa. 
+Ci\`o ci permetter\`a di dire che al 68\% il valore medio sar\`a tra $x-\sqrt{x}$ e $x+\sqrt{x}$.
+Inoltre l'errore \% sar\`a:
+\begin{equation*}
+\sigma_{\%} = \frac{\sigma}{x} = \frac{1}{\sqrt{x}}
+\end{equation*}
+per cui l'errore diminuisce all'aumentare della statistica.
+\section{Ottimizzazione dei conteggi}
+Supponiamo di voler eseguire un operazione di misura di rate: abbiamo un rate $S$ dovuto alla sorgente ed un rate $B$ dovuto al fondo.
+Noi siamo in grado di misurare il rate del fondo e il rate sorgente+fondo, supponendo di avere un tempo $T$ da suddividere in tempo per la
+misura del fondo $T_B$ e tempo per la misura del fondo+sorgente $T_{S+B}$, come devo suddividere il mio tempo per ottenere una misura
+pi\`u precisa possibile di $S$?\\
+Inanzitutto:
+\begin{equation*}
+B = \frac{N_B}{T_B}
+\end{equation*}
+mentre:
+\begin{equation*}
+S+B = \frac{N_{S+B}}{T_{S+B}}
+\end{equation*}
+di conseguenza:
+\begin{equation*}
+S = \frac{N_{S+B}}{T_{S+B}} - \frac{N_B}{T_B}
+\end{equation*}
+e:
+\begin{equation*}
+\sigma^2_S = \left(\frac{\sigma_{N_{S+B}}}{T_{S+B}}\right)^2 + \left(\frac{\sigma_{N_B}}{T_B}\right)^2= \frac{N_{S+B}}{T^2_{S+B}} + \frac{N_B}{T_B^2}
+= \frac{S+B}{T_{S+B}} + \frac{B}{T_B}
+\end{equation*}
+A questo punto differenziando la relazione si ha:
+\begin{equation*}
+2 \sigma_S d\sigma_S = - \frac{S+B}{T^2_{S+B}} dT_{S+B} - \frac{B}{T_B^2} dT_B
+\end{equation*}
+ponendo $d\sigma = 0$ e tenendo conto che $dT_{S+B} + dT_B=0$ quindi $\frac{dT_{S+B}{dT_{B}}} = -1$ si arriva a dire:
+\begin{equation*}
+\frac{T_{S+B}}{T_B}  = \sqrt{\frac{S+B}{B}}
+\end{equation*}
+In particolare si nota che per fondi molto intensi si ha $T_{S+B}=T_B$.
+Suddividendo i tempi come trovato, ponendo $\epsilon_{\%}$ l'errore relativo su S si ha che per S intensi rispetto al fondo:
+\begin{equation*}
+\epsilon_{\%} = \frac{1}{ST}
+\end{equation*}
+per cui \`e importante avere $S$ elevati, magari migliorando l'efficienza.
+Per S deboli e fondi intensi:
+\begin{equation*}
+\epsilon_{\%} = \frac{4B}{S^2 T}
+\end{equation*}
+in questo caso \`e importante ridurre il fondo, magari ottimizzando la configurazione di misura.
+\section{Limiti di rivelabilit\`a}
+Supponiamo di voler rivelare la presenza di una contaminazione dovuta ad un campione in un luogo.
+Prima effettueremo una misura di solo fondo, poi una misura in presenza del campione, vogliamo determinare dei livelli che indichino la presenza
+di un contaminante riducendo il rischio di falsi negativi e falsi positivi per fluttuazioni statistiche.
+Poniamo $N_B$ la misura di tasso effettuata con solo fondo, $N_T$ la misura di tasso effettuata con il campione (quindi fondo+sorgente) e
+poniamo $N_S$ il tasso dovuto unicamente alla sorgente.\\
+Analizziamo il caso in cui non sia presente contaminazione: chiaramente $N_S = N_T - N_B$ con $\sigma_{S} = \sqrt{\sigma_{T}^2 + \sigma_{B}^2} = \sqrt{N_{T} + N_{B}}$.
+Se non \`e presente contaminazione $\bar{N}_B = \bar{N}_T$  e $\sigma_{S}=\sqrt{2} \sqrt{N_B}$; se $N_S<0$ chiaramente non \`e presente
+contaminazione, mentre se $N_S>0$ \`e necessario porre un livello di confidenza per determinare la probabilit\`a di avere un falso positivo per fluttuazioni statistiche.
+In particolare se si prende un C.L. al 90\%, il 5\% dei casi sar\`a con $N_S$ negativo e il 5\% con $N_S$ positivo, per cui la probabilit\`a
+di falsi negativi sar\`a del 5\%.
+A un C.L. del 90\% corrisponde $1.645\sigma_S = 2.326\sigma_B$ per discriminare l'assenza di un contaminante, con un limite sui falsi positivi del 5\%.\\
+Con $N_S>2.326\sigma_B$ non si pu\`o affermare che sia presente un contaminante:
+per esempio se $\bar{N}_S=2.326\sigma_B$ il 50\% dei casi darebbe un falso negativo, per questo vogliamo stabilire una soglia per ridurre al di sotto del 5\% la probabilit\`a di falso negativo.
+In presenza di sole fluttuazioni statistiche e $N_S<<N_B$, poniamo $N_D$ il valore minimo di $N_S$ per poter determinare la presenza di un contaminante:
+$\sigma_D = \sqrt{2 N_B+N_D} \approx \sqrt{2 N_B}$, in questo caso $N_D$ potr\`a essere minore del C.L. (dando esito negativo) oppure maggiore.
+Se si pone $N_D = L_C + 1.645\sigma_D \approx 4.653 \sqrt{N_B}$ avr\`o il 5\% di probabilit\`a di avere falsi negativi, in quanto
+il 5\% delle fluttuazioni si pone al di sotto di $L_C$. 
+Un calcolo meno approssimato porta a dire:
+\begin{equation*}
+N_D = 4.653 \sqrt{N_B} + 2.706
+\end{equation*}
+A questo punto \`e possibile definire un'attivit\`a minima della sorgente per essere individuata:
+\begin{equation*}
+\alpha = \frac{N_D } {\epsilon_{abs} f T}
+\end{equation*}
+con $\epsilon_{abs}$ efficienza assoluta del rivelatore, $f$ quantit\`a di radiazione prodotta per disintegrazione e $T$ tempo di misura.
+\section{Distribuzione degli intervalli di tempo}
+La poissoniana determina le probabilit\`a nei processi con rate:
+\begin{equation*}
+P(n) = \frac{(rt)^n e^{-rt}}{n!}
+\end{equation*}
+la distribuzione dei tempi tra 2 eventi successivi si calcola come la probabilit\`a di avere 0 eventi fino a $t$ ed averne uno tra $t$ e $t+dt$:
+\begin{equation*}
+P(0) rdt= re^{-rt}dt
+\end{equation*}
+La probabilit\`a che un intervallo $t$ contenga $N$ eventi si calcola come:
+\begin{equation*}
+P(N-1)rdt=\frac{(rt)^{N-1}e^{-rt}}{(N-1)!}rdt
+\end{equation*}

@@ -1,0 +1,38 @@
+\documentclass[12pt,a4paper,titlepage]{report}
+\special{papersize=210mm,297mm}
+\usepackage[italian]{babel}
+\usepackage{amsmath, amsfonts, amssymb, mathrsfs, dsfont}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{graphicx}
+\pagestyle{fancy}
+\begin{document}
+\begin{titlepage}
+\title{Riassunto di rivelatori di particelle}
+\author{Simone Bologna\\Universit\`a degli studi di Milano-Bicocca\\Corso di laurea magistrale in Fisica}
+\date{}
+\end{titlepage}
+\pagestyle{plain}
+\maketitle
+\setcounter{page}{2}
+\tableofcontents
+\part{Introduzione e manipolazione dei segnali}
+\input{./TeX_Files/InterazioneRadiazioneMateria.tex}
+\input{./TeX_Files/Statistica.tex}
+\input{./TeX_Files/TrattamentoSegnali.tex}
+\input{./TeX_Files/ImpulsiLineariLogici.tex}
+\input{./TeX_Files/MisureTemporali.tex}
+\input{./TeX_Files/MCA.tex}
+\input{./TeX_Files/Pileup.tex}
+\part{Tipi di rivelatori}
+\input{./TeX_Files/IntroduzioneRivelatoriRadiazione.tex}
+\input{./TeX_Files/Scintillatori.tex}
+\input{./TeX_Files/SpettroscopiaGamma.tex}
+\input{./TeX_Files/RivelatoriAGas.tex}
+\input{./TeX_Files/RivelatoriSemiconduttore.tex}
+\input{./TeX_Files/NeutroniLenti.tex}
+\input{./TeX_Files/NeutroniVeloci.tex}
+\input{./TeX_Files/Bolometri.tex}
+\end{document}
